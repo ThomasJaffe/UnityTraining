@@ -25,8 +25,7 @@ public class CircleBehaviour : MonoBehaviour
         _toDestroy = collision.gameObject;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
+    private void OnTriggerExit2D(Collider2D collision) {
         _toDestroy = null;
     }
 }
