@@ -3,12 +3,11 @@ using UnityEngine;
 public class CircleMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    private Gamemanager Manager;
+    [SerializeField] private Gamemanager Manager;
     // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector2(-8,0);
-        Manager = gameObject.AddComponent<Gamemanager>();
     }
 
     // Update is called once per frame

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMenuOpen: 0
+  menu: {fileID: 1085383120}
 --- !u!4 &192762703
 Transform:
   m_ObjectHideFlags: 0
@@ -278,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  Manager: {fileID: 192762702}
 --- !u!212 &237769627
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a646fa779b1f4884da8ff6dc65235f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Manager: {fileID: 192762702}
 --- !u!50 &237769630
 Rigidbody2D:
   serializedVersion: 4
@@ -737,7 +740,7 @@ GameObject:
   - component: {fileID: 643645521}
   - component: {fileID: 643645520}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_reprendre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,12 +5,11 @@ public class CircleBehaviour : MonoBehaviour
     private SpriteRenderer _renderer;
     private Color _baseColor;
     private GameObject _toDestroy;
-    private Gamemanager Manager;
+    [SerializeField] private Gamemanager Manager;
     // Start is called before the first frame update
     void Start() {
         _renderer = GetComponent<SpriteRenderer>();
         _baseColor = _renderer.color;
-        Manager = gameObject.AddComponent<Gamemanager>();
     }
 
     // Update is called once per frame
