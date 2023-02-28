@@ -5,19 +5,24 @@ public class CircleBehaviour : MonoBehaviour
     private SpriteRenderer _renderer;
     private Color _baseColor;
     private GameObject _toDestroy;
+    private Gamemanager Manager;
     // Start is called before the first frame update
     void Start() {
         _renderer = GetComponent<SpriteRenderer>();
         _baseColor = _renderer.color;
+        Manager = gameObject.AddComponent<Gamemanager>();
     }
 
     // Update is called once per frame
     void Update()  {
-        if (Input.GetButton("Jump")) {
-            _renderer.color = Color.red;
-        } else if (Input.GetButtonUp("Jump")){
-            _renderer.color = _baseColor;
-            Destroy(_toDestroy);
+        if (!Manager.isMenuOpen) {
+            if (Input.GetButton("Jump")) {
+                _renderer.color = Color.red;
+            }
+            else if (Input.GetButtonUp("Jump")) {
+                _renderer.color = _baseColor;
+                Destroy(_toDestroy);
+            }
         }
     }
 
